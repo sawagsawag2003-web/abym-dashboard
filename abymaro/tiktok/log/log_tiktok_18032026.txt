@@ -1,0 +1,15 @@
+[07:18:53] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (98.pdf)
+[07:21:01] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (Hunee.pdf)
+[07:21:58] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (98.pdf, Hunee.pdf)
+[07:25:36] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (Hunee.pdf)
+[07:26:18] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 4 file (6S.pdf, 98.pdf, Hunee.pdf, XMKN18.3.pdf)
+[07:27:14] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 4 file (6S.pdf, 98.pdf, Hunee.pdf, XMKN18.3.pdf)
+[07:27:16] [Unknown-IP] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file Tiktok_SX_1803_07h27.zip | Tổng đơn: 377
+[07:27:18] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 4 file (6S.pdf, 98.pdf, Hunee.pdf, XMKN18.3.pdf)
+[14:32:54] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 3 file (6S.pdf, Hunee.pdf, XMKN18.3.pdf)
+[14:32:55] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (6S.pdf, XMKN18.3.pdf)
+[14:32:55] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (6S.pdf)
+[14:33:04] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 5 file (6S.pdf, 98.pdf, Hunee.pdf, Live.pdf, XMKN2h.pdf)
+[14:33:10] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 5 file (6S.pdf, 98.pdf, Hunee.pdf, Live.pdf, XMKN2h.pdf)
+[14:33:11] [Unknown-IP] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file Tiktok_SX_1803_14h33.zip | Tổng đơn: 172
+[14:33:12] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 5 file (6S.pdf, 98.pdf, Hunee.pdf, Live.pdf, XMKN2h.pdf)

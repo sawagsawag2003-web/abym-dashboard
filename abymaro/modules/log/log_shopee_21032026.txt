@@ -1,0 +1,7 @@
+[07:43:55] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (Van main 1h.pdf)
+[07:44:10] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 21.3.pdf, vanmain 21.3.pdf)
+[07:44:20] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 21.3.pdf, vanmain 21.3.pdf)
+[07:44:21] [192.168.1.33:2002] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file SHOPEE_SX_2103_07h44.zip | Tổng đơn: 90
+[07:44:23] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 21.3.pdf, vanmain 21.3.pdf)
+[16:27:33] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (vanmain 21.3.pdf)
+[16:27:45] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 4h.pdf, Van main 4h.pdf)

@@ -1,0 +1,7 @@
+[14:36:42] [localhost:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (funny.pdf)
+[14:36:56] [localhost:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (funny.pdf)
+[14:36:56] [localhost:2002] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file SHOPEE_SX_2302_14h36.zip | Tổng đơn: 0
+[19:26:10] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 23.2.pdf, Van main 23.2.pdf)
+[19:26:28] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 23.2.pdf, Van main 23.2.pdf)
+[19:26:30] [192.168.1.33:2002] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file SHOPEE_SX_2302_19h26.zip | Tổng đơn: 216
+[19:26:52] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 23.2.pdf, Van main 23.2.pdf)

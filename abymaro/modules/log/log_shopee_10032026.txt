@@ -1,0 +1,5 @@
+[07:08:04] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (Van main 4h.pdf)
+[07:08:12] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 10.3.pdf, Van main 10.3.pdf)
+[07:08:32] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 10.3.pdf, Van main 10.3.pdf)
+[07:08:32] [192.168.1.33:2002] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file SHOPEE_SX_1003_07h08.zip | Tổng đơn: 111
+[07:08:34] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 10.3.pdf, Van main 10.3.pdf)

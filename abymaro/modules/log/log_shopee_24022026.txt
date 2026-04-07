@@ -1,0 +1,4 @@
+[16:16:23] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 24.2.pdf, van main 24.2.pdf)
+[16:17:09] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 24.2.pdf, van main 24.2.pdf)
+[16:17:11] [192.168.1.33:2002] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file SHOPEE_SX_2402_16h17.zip | Tổng đơn: 157
+[16:17:12] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 24.2.pdf, van main 24.2.pdf)

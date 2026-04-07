@@ -1,0 +1,26 @@
+[14:36:46] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (five.pdf)
+[14:36:58] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (five.pdf)
+[14:36:58] [Unknown-IP] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file Tiktok_SX_2302_14h36.zip | Tổng đơn: 3
+[14:37:21] [Unknown-IP] [Win 10/11] [Edge] 📥 TẢI LÊN: 1 file (funny.pdf)
+[14:37:24] [Unknown-IP] [Win 10/11] [Edge] 📥 TẢI LÊN: 1 file (funny.pdf)
+[14:37:24] [Unknown-IP] [Win 10/11] [Edge] ✅ XỬ LÝ XONG: Xuất file Tiktok_SX_2302_14h37.zip | Tổng đơn: 1
+[17:03:56] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (981.pdf, 982.pdf)
+[17:04:44] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (981.pdf, 982.pdf)
+[17:04:45] [Unknown-IP] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file Tiktok_SX_2302_17h04.zip | Tổng đơn: 335
+[17:04:48] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (981.pdf, 982.pdf)
+[17:11:29] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (982.pdf)
+[17:11:35] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (XMKN 23.2 5h.pdf)
+[17:11:40] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (XMKN 23.2 5h.pdf)
+[17:11:40] [Unknown-IP] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file Tiktok_SX_2302_17h11.zip | Tổng đơn: 64
+[17:12:24] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (XMKN 23.2 5h.pdf)
+[19:03:41] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (02-23_18-41-29_Shipping label+Packing slip.pdf, 02-23_18-44-11_Shipping label+Packing slip.pdf)
+[19:04:09] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (02-23_18-44-11_Shipping label+Packing slip.pdf)
+[19:04:42] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (6s1.pdf, 6s2.pdf)
+[19:05:19] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (6s1.pdf, 6s2.pdf)
+[19:05:20] [Unknown-IP] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file Tiktok_SX_2302_19h05.zip | Tổng đơn: 226
+[19:05:22] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (6s1.pdf, 6s2.pdf)
+[19:18:06] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (6s1.pdf)
+[19:18:13] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 3 file (98.pdf, hunee.pdf, re1.pdf)
+[19:19:10] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 3 file (98.pdf, hunee.pdf, re1.pdf)
+[19:19:11] [Unknown-IP] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file Tiktok_SX_2302_19h19.zip | Tổng đơn: 218
+[19:19:14] [Unknown-IP] [Win 10/11] [Chrome] 📥 TẢI LÊN: 3 file (98.pdf, hunee.pdf, re1.pdf)
