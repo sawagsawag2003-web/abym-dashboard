@@ -1,4 +1,0 @@
-[06:56:26] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 5.3.pdf, Van main 5.3.pdf)
-[06:56:47] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 5.3.pdf, Van main 5.3.pdf)
-[06:56:48] [192.168.1.33:2002] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file SHOPEE_SX_0503_06h56.zip | Tổng đơn: 128
-[06:56:50] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Than main 5.3.pdf, Van main 5.3.pdf)

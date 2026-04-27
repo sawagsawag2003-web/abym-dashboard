@@ -1,4 +1,0 @@
-[07:14:28] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Thanmain 24.3.pdf, Vanmain24.3.pdf)
-[07:14:58] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Thanmain 24.3.pdf, Vanmain24.3.pdf)
-[07:14:59] [192.168.1.33:2002] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file SHOPEE_SX_2403_07h14.zip | Tổng đơn: 113
-[07:15:01] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Thanmain 24.3.pdf, Vanmain24.3.pdf)

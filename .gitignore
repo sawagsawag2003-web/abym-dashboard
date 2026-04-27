@@ -25,3 +25,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Runtime data - do not push
+backend/*.db
+backend/*.db-*
+backend/*.db.bak-*
+backend/log/
+backend/saved_orders/
+apps_streamlit/**/log/
+apps_streamlit/**/__pycache__/
+**/__pycache__/
+*.pyc
+*.pdf
+*.zip
+*.xlsx
+tools/reports/
+.venv/
+.streamlit/

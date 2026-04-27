@@ -1,9 +1,0 @@
-[07:23:11] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Thanmain 18.3.pdf, VANMAIN 18.3.pdf)
-[07:23:49] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Thanmain 18.3.pdf, VANMAIN 18.3.pdf)
-[07:23:50] [192.168.1.33:2002] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file SHOPEE_SX_1803_07h23.zip | Tổng đơn: 110
-[07:23:53] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Thanmain 18.3.pdf, VANMAIN 18.3.pdf)
-[14:34:21] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 1 file (VANMAIN 18.3.pdf)
-[14:34:28] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Thanmain 2h.pdf, vanmain 2h.pdf)
-[14:34:38] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Thanmain 2h.pdf, vanmain 2h.pdf)
-[14:34:39] [192.168.1.33:2002] [Win 10/11] [Chrome] ✅ XỬ LÝ XONG: Xuất file SHOPEE_SX_1803_14h34.zip | Tổng đơn: 52
-[14:34:41] [192.168.1.33:2002] [Win 10/11] [Chrome] 📥 TẢI LÊN: 2 file (Thanmain 2h.pdf, vanmain 2h.pdf)

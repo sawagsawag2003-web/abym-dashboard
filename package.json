@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "concurrently \"next dev\" \"python -m streamlit run abymaro/modules/app.py --server.port 8503\" \"python -m streamlit run abymaro/tiktok/app.py --server.port 8504\"",
+    "dev": "concurrently \"next dev\" \"python -m streamlit run apps_streamlit/abymaro/modules/app.py --server.port 8503\" \"python -m streamlit run apps_streamlit/abymaro/tiktok/app.py --server.port 8504\"",
     "lint": "eslint .",
     "start": "next start"
   },
