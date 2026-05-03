@@ -39,6 +39,9 @@ apps_streamlit/**/__pycache__/
 *.pdf
 *.zip
 *.xlsx
+*.log
+*.err.log
+*_test_page*.png
 tools/reports/
 .venv/
 .streamlit/

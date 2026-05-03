@@ -211,14 +211,27 @@ export async function handlePdfSearchPageRequest(request: Request, options: PdfS
     const rootPath = (searchParams.get("rootPath") || "").trim()
     const filePath = searchParams.get("path")
     const pageNumber = Number(searchParams.get("page"))
+    const pageNumbers = (searchParams.get("pages") || "")
+      .split(",")
+      .map((value) => Number(value.trim()))
+      .filter((value) => Number.isFinite(value) && value >= 1)
     const download = searchParams.get("download") === "1"
+    const pages = pageNumbers.length ? Array.from(new Set(pageNumbers)).sort((a, b) => a - b) : [pageNumber]
 
-    if (!rootPath || !filePath || !Number.isFinite(pageNumber) || pageNumber < 1) {
+    if (!rootPath || !filePath || pages.some((page) => !Number.isFinite(page) || page < 1)) {
       return NextResponse.json({ error: "Yêu cầu không hợp lệ" }, { status: 400 })
     }
 
-    const pdfBuffer = extractPdfSearchPage(rootPath, filePath, pageNumber, options)
-    const fileName = `${filePath.split("/").pop()?.replace(/\.pdf$/i, "") ?? "page"}-p${pageNumber}.pdf`
+    const pdfBuffer =
+      pages.length === 1
+        ? extractPdfSearchPage(rootPath, filePath, pages[0], options)
+        : mergePdfSearchPages(
+            rootPath,
+            pages.map((page) => ({ filePath, pageNumber: page })),
+            options
+          )
+    const pageLabel = pages.length === 1 ? `p${pages[0]}` : `p${pages[0]}-${pages[pages.length - 1]}`
+    const fileName = `${filePath.split("/").pop()?.replace(/\.pdf$/i, "") ?? "page"}-${pageLabel}.pdf`
 
     return new Response(pdfBuffer, {
       status: 200,

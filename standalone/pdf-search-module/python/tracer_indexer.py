@@ -106,6 +106,10 @@ def extract_codes_from_text(text):
     return sorted(found)
 
 
+def extract_tiktok_order_ids_from_text(text):
+    return sorted(set(re.findall(r"Order ID:\s*(\d+)", text or "")))
+
+
 class TracerIndex:
     def __init__(self, root_path, db_path=None):
         self.root_path = os.path.abspath(root_path)
@@ -332,25 +336,64 @@ class TracerIndex:
 
             doc = fitz.open(source_path)
             try:
+                scanned_pages = []
+                tiktok_order_map = {}
+                result_keys = set()
+
                 for page_index in range(len(doc)):
                     page = doc.load_page(page_index)
                     text = extract_page_text(page)
+                    tiktok_order_ids = extract_tiktok_order_ids_from_text(text)
                     page_codes = {
                         normalize_code(code): carrier for code, carrier in extract_codes_from_text(text)
                     }
+                    scanned_pages.append(
+                        {
+                            "page_index": page_index,
+                            "page_codes": page_codes,
+                            "tiktok_order_ids": tiktok_order_ids,
+                        }
+                    )
 
                     for normalized_code, detected_carrier in page_codes.items():
                         if normalized_code not in code_map:
                             continue
 
                         for item in code_map[normalized_code]:
+                            key = (item.get("orderId", ""), relative_path, page_index + 1)
+                            if key not in result_keys:
+                                result_keys.add(key)
+                                results.append(
+                                    {
+                                        "orderId": item.get("orderId", ""),
+                                        "carrier": item.get("carrier") or detected_carrier or "",
+                                        "filePath": relative_path,
+                                        "fileName": os.path.basename(relative_path),
+                                        "pageNumber": page_index + 1,
+                                        "createdAt": item.get("createdAt", ""),
+                                        "fileSize": int(item.get("fileSize") or 0),
+                                    }
+                                )
+
+                            for tiktok_order_id in tiktok_order_ids:
+                                tiktok_order_map.setdefault(tiktok_order_id, []).append(item)
+
+                for scanned_page in scanned_pages:
+                    for tiktok_order_id in scanned_page["tiktok_order_ids"]:
+                        for item in tiktok_order_map.get(tiktok_order_id, []):
+                            page_number = scanned_page["page_index"] + 1
+                            key = (item.get("orderId", ""), relative_path, page_number)
+                            if key in result_keys:
+                                continue
+
+                            result_keys.add(key)
                             results.append(
                                 {
                                     "orderId": item.get("orderId", ""),
-                                    "carrier": item.get("carrier") or detected_carrier or "",
+                                    "carrier": item.get("carrier") or "",
                                     "filePath": relative_path,
                                     "fileName": os.path.basename(relative_path),
-                                    "pageNumber": page_index + 1,
+                                    "pageNumber": page_number,
                                     "createdAt": item.get("createdAt", ""),
                                     "fileSize": int(item.get("fileSize") or 0),
                                 }

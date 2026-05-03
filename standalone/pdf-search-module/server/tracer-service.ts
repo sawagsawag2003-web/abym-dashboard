@@ -1,4 +1,4 @@
-import { mkdtempSync, readFileSync, rmSync } from "fs"
+import { existsSync, mkdtempSync, readFileSync, rmSync } from "fs"
 import os from "os"
 import path from "path"
 import { spawnSync } from "child_process"
@@ -35,6 +35,14 @@ function resolveDefaultCliPath() {
   return path.join(process.cwd(), "standalone", "pdf-search-module", "python", "tracer_cli.py")
 }
 
+function resolveDefaultPythonExecutable() {
+  const localPython = process.platform === "win32"
+    ? path.join(process.cwd(), ".venv", "Scripts", "python.exe")
+    : path.join(process.cwd(), ".venv", "bin", "python")
+
+  return existsSync(localPython) ? localPython : "python"
+}
+
 function normalizeRootPath(rootPath: string) {
   if (!rootPath?.trim()) throw new Error("Thieu rootPath")
   return path.resolve(rootPath.trim())
@@ -45,7 +53,7 @@ function resolveDbPath(rootPath: string, dbFileName: string) {
 }
 
 function runTracerCommand<T>(command: string, payload: PythonPayload, options: PdfSearchServiceOptions): T {
-  const pythonExecutable = options.pythonExecutable || "python"
+  const pythonExecutable = options.pythonExecutable || resolveDefaultPythonExecutable()
   const cliPath = options.cliPath || resolveDefaultCliPath()
 
   const result = spawnSync(pythonExecutable, [cliPath, command], {

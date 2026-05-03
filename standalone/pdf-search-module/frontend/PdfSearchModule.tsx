@@ -9,10 +9,41 @@ type Props = {
   fixedRootPath?: string
 }
 
+type GroupedPdfSearchResult = PdfSearchResult & {
+  pageNumbers: number[]
+}
+
 function formatBytes(sizeBytes: number) {
   const sizeMb = sizeBytes / (1024 * 1024)
   if (sizeMb >= 1) return `${sizeMb.toFixed(1)} MB`
   return `${Math.max(1, Math.round(sizeBytes / 1024))} KB`
+}
+
+function getResultKey(item: GroupedPdfSearchResult) {
+  return `${item.filePath}:${item.orderId}`
+}
+
+function groupSearchResults(items: PdfSearchResult[]): GroupedPdfSearchResult[] {
+  const grouped = new Map<string, GroupedPdfSearchResult>()
+
+  for (const item of items) {
+    const key = `${item.filePath}:${item.orderId}`
+    const existing = grouped.get(key)
+    if (!existing) {
+      grouped.set(key, { ...item, pageNumbers: [item.pageNumber] })
+      continue
+    }
+
+    existing.pageNumbers = Array.from(new Set([...existing.pageNumbers, item.pageNumber])).sort((a, b) => a - b)
+    existing.pageNumber = existing.pageNumbers[0]
+  }
+
+  return Array.from(grouped.values())
+}
+
+function formatPageNumbers(pages: number[]) {
+  if (pages.length <= 1) return `Trang ${pages[0] ?? ""}`
+  return `Trang ${pages.join(", ")}`
 }
 
 export function PdfSearchModule({
@@ -22,7 +53,7 @@ export function PdfSearchModule({
 }: Props) {
   const [rootPath, setRootPath] = useState(fixedRootPath ?? initialRootPath)
   const [input, setInput] = useState("")
-  const [results, setResults] = useState<PdfSearchResult[]>([])
+  const [results, setResults] = useState<GroupedPdfSearchResult[]>([])
   const [selectedKeys, setSelectedKeys] = useState<Record<string, boolean>>({})
   const [stats, setStats] = useState<PdfSearchStats>({ totalFiles: 0, totalSizeBytes: 0 })
   const [isLoadingStats, setIsLoadingStats] = useState(false)
@@ -78,7 +109,7 @@ export function PdfSearchModule({
       })
       const data = await response.json()
       if (!response.ok) throw new Error(data.error || "Không thể tra cứu")
-      setResults(data.results ?? [])
+      setResults(groupSearchResults(data.results ?? []))
       setStats((prev) => ({
         totalFiles: data.totalFiles ?? prev.totalFiles,
         totalSizeBytes: data.totalSizeBytes ?? prev.totalSizeBytes,
@@ -93,20 +124,20 @@ export function PdfSearchModule({
   const selectedItems = useMemo(
     () =>
       results
-        .filter((item) => selectedKeys[`${item.filePath}:${item.pageNumber}:${item.orderId}`])
-        .map((item) => ({ filePath: item.filePath, pageNumber: item.pageNumber })),
+        .filter((item) => selectedKeys[getResultKey(item)])
+        .flatMap((item) => item.pageNumbers.map((pageNumber) => ({ filePath: item.filePath, pageNumber }))),
     [results, selectedKeys]
   )
 
-  const toggleSelection = (item: PdfSearchResult) => {
-    const key = `${item.filePath}:${item.pageNumber}:${item.orderId}`
+  const toggleSelection = (item: GroupedPdfSearchResult) => {
+    const key = getResultKey(item)
     setSelectedKeys((prev) => ({ ...prev, [key]: !prev[key] }))
   }
 
   const handleSelectAll = () => {
     if (results.length === 0) return
 
-    const allSelected = results.every((item) => selectedKeys[`${item.filePath}:${item.pageNumber}:${item.orderId}`])
+    const allSelected = results.every((item) => selectedKeys[getResultKey(item)])
     if (allSelected) {
       setSelectedKeys({})
       return
@@ -114,7 +145,7 @@ export function PdfSearchModule({
 
     const nextState: Record<string, boolean> = {}
     for (const item of results) {
-      nextState[`${item.filePath}:${item.pageNumber}:${item.orderId}`] = true
+      nextState[getResultKey(item)] = true
     }
     setSelectedKeys(nextState)
   }
@@ -249,11 +280,11 @@ export function PdfSearchModule({
                 </tr>
               ) : (
                 results.map((item) => {
-                  const key = `${item.filePath}:${item.pageNumber}:${item.orderId}`
+                  const key = getResultKey(item)
                   const query = new URLSearchParams({
                     rootPath: rootPath.trim(),
                     path: item.filePath,
-                    page: String(item.pageNumber),
+                    pages: item.pageNumbers.join(","),
                   })
                   const pageUrl = `${apiBasePath}/page?${query.toString()}`
                   const downloadUrl = `${pageUrl}&download=1`
@@ -269,7 +300,7 @@ export function PdfSearchModule({
                         <div>{item.fileName}</div>
                         <div style={styles.pathText}>{item.filePath}</div>
                       </td>
-                      <td style={styles.td}>Trang {item.pageNumber}</td>
+                      <td style={styles.td}>{formatPageNumbers(item.pageNumbers)}</td>
                       <td style={styles.td}>{item.createdAt}</td>
                       <td style={styles.td}>{formatBytes(item.fileSize)}</td>
                       <td style={styles.td}>
